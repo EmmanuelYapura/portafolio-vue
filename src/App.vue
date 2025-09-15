@@ -1,10 +1,10 @@
 <script setup>
-  const nombre = "Manu";
+import NavBar from './components/NavBar.vue';
 </script>
 
 <template>
   <header>
-    <h1>{{ nombre }}</h1>  
+    <NavBar />  
   </header>
 </template>
 
