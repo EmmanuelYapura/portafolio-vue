@@ -1,12 +1,17 @@
 <script setup>
+import MainHero from './components/MainHero.vue';
 import NavBar from './components/NavBar.vue';
 </script>
 
 <template>
-  <header>
     <NavBar />  
-  </header>
+    <MainHero />
 </template>
 
-<style scoped>
+<style>
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
 </style>
