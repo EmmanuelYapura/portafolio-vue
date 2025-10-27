@@ -16,10 +16,11 @@
 <script setup>
 import { ref } from 'vue';
 const navegacion = ref([
-    {id:1, nombre: "Educacion", enlace: "#educacion"},
+    {id:1, nombre: "Proyectos", enlace: "#proyectos"},
     {id:2, nombre: "Experiencia", enlace: "#experiencia"},
-    {id:3, nombre: "Proyectos", enlace: "#proyectos"},
-    {id:4, nombre: "Habilidades", enlace: "#habilidades"}
+    {id:3, nombre: "Educacion", enlace: "#educacion"},
+    {id:4, nombre: "Sobre mi", enlace: "#sobremi"},
+    {id:5, nombre: "Contacto", enlace: "#contacto"}
 ])
 </script>
 
@@ -61,7 +62,6 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border: 1px solid black;
 }
 
 .navbar{
@@ -74,16 +74,16 @@ li{
 }
 
 @media (min-width: 992px ){
-ul{
-    justify-content: space-evenly;
+    ul{
+        justify-content: space-evenly;
+    }
+
+    .nav-item{
+        font-size: 1.15rem;
+    } 
 }
 
-.nav-item{
-    font-size: 1.15rem;
-} 
-}
-
-@media (max-width: 545px) {
+@media (max-width: 768px) {
     
     header h3{
         padding-left: 0;
