@@ -69,7 +69,6 @@ const cursos = ref([
 
         h3{
             padding-bottom: 1rem;
-            color: #fff;
             font-size: 1.1rem;
         }
 
