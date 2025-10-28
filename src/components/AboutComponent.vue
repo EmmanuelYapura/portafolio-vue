@@ -3,7 +3,7 @@
         <div class="section-container">
             <h2>Sobre mi</h2>
             <article>
-                <img src="/src/assets/caricatura.png" width="230" height="300" alt="sobre-mi">
+                <img src="/src/assets/caricatura.png" class="img-ey" width="230" height="300" alt="sobre-mi">
                 <div class="text-abme">
                     <p>
                         Soy desarrollador enfocado en backend y automatización, con experiencia en Python, desarrollo de APIs y técnicas de web scraping. Disfruto crear soluciones que automatizan tareas y conectan servicios de forma eficiente.
@@ -58,6 +58,12 @@
 </script>
 
 <style scoped>
+
+    section{
+        background-color: #f8f8f8;
+        margin-bottom: 1rem;
+    }
+
     .section-container{
         max-width: 1420px;
         margin: 0 auto;
@@ -74,6 +80,10 @@
         justify-content: center;
         align-items: center;
         padding: 2.5rem 0;
+    }
+
+    .img-ey{
+        mix-blend-mode: multiply;
     }
 
     .text-abme{
