@@ -3,8 +3,8 @@
         <h1>Hola, soy Emmanuel Yapura</h1>
         <p>Estudiante de Tecnicatura en Sistemas con pasion por el desarrollo backend y la programacion. Busco oportunidades para aplicar mis conocimientos y crecer profesionalmente.</p>
         <div>
-            <button class="btn-contact">Contactame</button>
-            <button class="btn-projects">Ver Proyectos</button>
+            <a href="#contacto"><button class="btn-contact">Contactame</button></a>
+            <a href="#proyectos"><button class="btn-projects">Ver Proyectos</button></a>
         </div>
     </section>
 </template>
@@ -51,6 +51,10 @@
         border: none;
         border-radius: 0.5rem;
         cursor: pointer;
+
+        a{
+            text-decoration: none;
+        }
     }
 
     .btn-projects{
