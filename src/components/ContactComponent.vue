@@ -47,10 +47,10 @@
 <script setup>
 import { ref } from 'vue';
 const datos = ref([
-    { id: 1, medio: "Email", link: "eyapura96@gmail.com", icon: "/src/assets/mail.svg" },
-    { id: 2, medio: "LinkedIn", link: "https://www.linkedin.com/in/emmanuelyapura/", icon: "/src/assets/linkedin.svg" },
-    { id: 3, medio: "GitHub", link: "https://github.com/EmmanuelYapura", icon: "/src/assets/github.svg" },
-    { id: 4, medio: "Ubicacion", link: "Argentina, Buenos Aires", icon: "/src/assets/pin.svg" }
+    { id: 1, medio: "Email", link: "eyapura96@gmail.com", icon: "/icons/mail.svg" },
+    { id: 2, medio: "LinkedIn", link: "https://www.linkedin.com/in/emmanuelyapura/", icon: "/icons/linkedin.svg" },
+    { id: 3, medio: "GitHub", link: "https://github.com/EmmanuelYapura", icon: "/icons/github.svg" },
+    { id: 4, medio: "Ubicacion", link: "Argentina, Buenos Aires", icon: "/icons/pin.svg" }
 ])
 </script>
 

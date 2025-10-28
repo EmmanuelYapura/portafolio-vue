@@ -22,10 +22,10 @@
 <script setup>
 import { ref } from 'vue';
 const proyectos = ref([
-    {id:1, nombre: "App lista nombres", descripcion: "Este proyecto te permite guardas, editar y eliminar nombres para tu niña en camino, utilizalo como agenda.", enlaceCodigo:"https://github.com/EmmanuelYapura/registro-nombres", enlaceDemo: "https://registro-nombres.netlify.app/", imgUrl: "/src/assets/img-listanombres.png"},
-    {id:2, nombre: "Peliculas (TMDB API)", descripcion: "App para visualizar peliculas de TMDB API, cuenta con un buscador y la opcion de agregar a favoritos las peliculas que gustes.", enlaceCodigo: "https://github.com/EmmanuelYapura/API_peliculas", enlaceDemo: "https://apipeliculastmdb.netlify.app/", imgUrl: "/src/assets/img-peliculas.jpg"},
-    {id:3, nombre: "Scraper Musimundo", descripcion:"Este script extrae datos de la tienda de tecnologia Musimundo, con una base de datos para almacenar las productos deseados.", enlaceCodigo:"https://github.com/EmmanuelYapura/scraping-musimundo", imgUrl: "/src/assets/img-musimundo.jpg"},
-    {id: 4, nombre:"Bus Scraper", descripcion: "Este script recopila datos de la pagina devivobus, utilizando Fast API para visualizarlos mediante endpoints", enlaceCodigo:"https://github.com/EmmanuelYapura/bus-scraper", imgUrl:"/src/assets/img-bus.jpg"}
+    {id:1, nombre: "App lista nombres", descripcion: "Este proyecto te permite guardas, editar y eliminar nombres para tu niña en camino, utilizalo como agenda.", enlaceCodigo:"https://github.com/EmmanuelYapura/registro-nombres", enlaceDemo: "https://registro-nombres.netlify.app/", imgUrl: "/proyectos/img-listanombres.png"},
+    {id:2, nombre: "Peliculas (TMDB API)", descripcion: "App para visualizar peliculas de TMDB API, cuenta con un buscador y la opcion de agregar a favoritos las peliculas que gustes.", enlaceCodigo: "https://github.com/EmmanuelYapura/API_peliculas", enlaceDemo: "https://apipeliculastmdb.netlify.app/", imgUrl: "/proyectos/img-peliculas.jpg"},
+    {id:3, nombre: "Scraper Musimundo", descripcion:"Este script extrae datos de la tienda de tecnologia Musimundo, con una base de datos para almacenar las productos deseados.", enlaceCodigo:"https://github.com/EmmanuelYapura/scraping-musimundo", imgUrl: "/proyectos/img-musimundo.jpg"},
+    {id: 4, nombre:"Bus Scraper", descripcion: "Este script recopila datos de la pagina devivobus, utilizando Fast API para visualizarlos mediante endpoints", enlaceCodigo:"https://github.com/EmmanuelYapura/bus-scraper", imgUrl:"/proyectos/img-bus.jpg"}
 ]);
 </script>
 
