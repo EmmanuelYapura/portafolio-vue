@@ -58,7 +58,6 @@ li{
     max-width: 1420px;    
     margin: 0 auto;    
     padding: 1.8rem 0;   
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,18 +69,9 @@ li{
 
 .nav-item{
     text-decoration: none;
-    color: #EEEEEE;
+    color: #ddd;
 }
 
-@media (min-width: 992px ){
-    ul{
-        justify-content: space-evenly;
-    }
-
-    .nav-item{
-        font-size: 1.15rem;
-    } 
-}
 
 @media (max-width: 768px) {
     
@@ -90,6 +80,14 @@ li{
         margin-bottom: 1rem;
     }
     
+    ul{
+        padding: 0 1rem;
+    }
+
+    li{
+        padding-right: 0.8rem;
+    }
+
     .header-content{
         flex-direction: column;
     }
@@ -97,6 +95,7 @@ li{
     .navbar{
         padding-right: 0;
     }
+
 }
 
 
