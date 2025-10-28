@@ -15,46 +15,26 @@
             </article>
             <h2>Habilidades</h2>
             <article class="skills-article">
-                    <div class="skills-container">
-                        <img src="/src/assets/world.svg" alt="icon"> <span>Frontend</span>
+                    <div v-for="skill in skills" :key="skill.id" class="skills-container">
+                        <img :src="skill.icon" alt="icon"> <span>{{ skill.seccion }}</span>
                         <div class="items">
-                            <small>HTML</small>
-                            <small>CSS</small>
-                            <small>JavaScript</small>
-                            <small>React</small>
+                            <small v-for="tecnologia in skill.tecnologias" :key="tecnologia"> {{ tecnologia }}</small>
                         </div> 
                     </div>
-                    <div class="skills-container">
-                        <img src="/src/assets/code.svg" alt="icon"> <span>Backend</span>
-                        <div class="items">
-                            <small>Python</small>
-                            <small>API REST</small>
-                            <small>Node JS</small>
-                        </div>
-                    </div>
-                    <div class="skills-container">
-                        <img src="/src/assets/database.svg" alt="icon"><span>Bases de datos</span>
-                        <div class="items">
-                            <small>MySQL</small>
-                            <small>MongoDB</small>
-                            <small>Firebase</small>
-                        </div>
-                    </div>
-                    <div class="skills-container">
-                        <img src="/src/assets/tool.svg" alt="icon"> <span>Herramientas</span>
-                        <div class="items">
-                            <small>Git</small>
-                            <small>Github</small>
-                            <small>Docker</small>
-                        </div>
-                    </div>
-
             </article>
         </div>
     </section>
 </template>
 
 <script setup>
+import { ref } from 'vue';
+
+const skills = ref([
+    {id:1, seccion: "Frontend", tecnologias:["HTML", "CSS", "JavaScript", "React"], icon: "/icons/world.svg"},
+    {id:2, seccion: "Backend", tecnologias:["Python", "API REST", "Node JS"], icon: "/icons/code.svg"},
+    {id:3, seccion: "Base de datos", tecnologias:["MySQL", "MondoDB", "Firebase"], icon: "/icons/database.svg"},
+    {id:4, seccion: "Herramientas", tecnologias:["Git", "GitHub", "Docker"], icon: "/icons/tool.svg"},
+])
 </script>
 
 <style scoped>
