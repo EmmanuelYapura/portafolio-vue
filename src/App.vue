@@ -2,6 +2,7 @@
 import AboutComponent from './components/AboutComponent.vue';
 import ContactComponent from './components/ContactComponent.vue';
 import EducationComponent from './components/EducationComponent.vue';
+import ExperienceComponent from './components/ExperienceComponent.vue';
 import MainHero from './components/MainHero.vue';
 import NavBar from './components/NavBar.vue';
 import ProjectsComponent from './components/ProjectsComponent.vue';
@@ -11,6 +12,7 @@ import ProjectsComponent from './components/ProjectsComponent.vue';
     <NavBar />  
     <MainHero />
     <ProjectsComponent id="proyectos"/>
+    <ExperienceComponent id="experiencia"/>
     <EducationComponent id="educacion"/>
     <AboutComponent id="sobremi"/>
     <ContactComponent id="contacto"/>
