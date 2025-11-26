@@ -23,18 +23,19 @@
                 <article class="form-article">
                     <h3>Enviame un mensaje</h3>
                     <p>Completa el formulario y te respondere lo antes posible</p>
-                    <form>
+                    <form name="contacto" method="POST" netlify @submit.prevent="handleSubmit">
+                        <input type="hidden" name="form-name" value="contacto">
                         <div class="form-group">
                             <label for="name">Nombre</label>
-                            <input type="text" placeholder="ej: Mario Gomez" id="name">
+                            <input name="name" type="text" placeholder="ej: Mario Gomez" id="name" v-model="name">
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input type="text" placeholder="tu_email@ejemplo.com" id="email">
+                            <input name="email" type="text" placeholder="tu_email@ejemplo.com" id="email" v-model="email">
                         </div>
                         <div class="form-group">
                             <label for="msg">Mensaje</label>
-                            <textarea id="msg" placeholder="Cuentame sobre la oportunidad o proyecto..."></textarea>
+                            <textarea name="message" id="msg" placeholder="Cuentame sobre la oportunidad o proyecto..." v-model="msg"></textarea>
                         </div>
                         <button type="submit">Enviar Mensaje</button>
                     </form>
@@ -52,6 +53,24 @@ const datos = ref([
     { id: 3, medio: "GitHub", link: "https://github.com/EmmanuelYapura", icon: "/icons/github.svg" },
     { id: 4, medio: "Ubicacion", link: "Argentina, Buenos Aires", icon: "/icons/pin.svg" }
 ])
+
+const name = ref('');
+const email = ref('');
+const msg = ref('');
+
+const handleSubmit = () => {
+  if (!name.value.trim() || !email.value.trim() || !msg.value.trim()) {
+    alert("Todos los campos son obligatorios, prueba en netlify antes de incluir carteles");
+    return;
+  }
+
+  const form = document.forms["contacto"];
+  form.submit();
+
+  name.value = "";
+  email.value = "";
+  msg.value = "";
+};
 </script>
 
 <style scoped>
