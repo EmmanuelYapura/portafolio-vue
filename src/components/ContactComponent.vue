@@ -23,7 +23,9 @@
                 <article class="form-article">
                     <h3>Enviame un mensaje</h3>
                     <p>Completa el formulario y te respondere lo antes posible</p>
-                    <form name="contacto" action="/?success=true" method="POST" data-netlify="true" netlify @submit.prevent="handleSubmit">
+                    <p class="msg-error" v-if="showError">Los campos son obligatorios!</p>
+                    <form name="contacto" action="/?success=true" method="POST" data-netlify="true" netlify
+                        @submit.prevent="handleSubmit">
                         <input type="hidden" name="form-name" value="contacto">
                         <div class="form-group">
                             <label for="name">Nombre</label>
@@ -31,11 +33,13 @@
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input name="email" type="text" placeholder="tu_email@ejemplo.com" id="email" v-model="email">
+                            <input name="email" type="text" placeholder="tu_email@ejemplo.com" id="email"
+                                v-model="email">
                         </div>
                         <div class="form-group">
                             <label for="msg">Mensaje</label>
-                            <textarea name="message" id="msg" placeholder="Cuentame sobre la oportunidad o proyecto..." v-model="msg"></textarea>
+                            <textarea name="message" id="msg" placeholder="Cuentame sobre la oportunidad o proyecto..."
+                                v-model="msg"></textarea>
                         </div>
                         <button type="submit">Enviar Mensaje</button>
                     </form>
@@ -57,19 +61,21 @@ const datos = ref([
 const name = ref('');
 const email = ref('');
 const msg = ref('');
+const showError = ref(false);
 
 const handleSubmit = () => {
-  if (!name.value.trim() || !email.value.trim() || !msg.value.trim()) {
-    alert("Todos los campos son obligatorios, prueba en netlify antes de incluir carteles");
-    return;
-  }
+    if (!name.value.trim() || !email.value.trim() || !msg.value.trim()) {
+        showError.value = true;
+        return;
+    }
 
-  const form = document.forms["contacto"];
-  form.submit();
+    const form = document.forms["contacto"];
+    form.submit();
 
-  name.value = "";
-  email.value = "";
-  msg.value = "";
+    name.value = "";
+    email.value = "";
+    msg.value = "";
+    showError.value = false;
 };
 </script>
 
@@ -142,6 +148,15 @@ address {
     }
 }
 
+.msg-error {
+    color: red;
+    margin-top: 0.5rem;
+    padding: 0.1rem;
+    text-align: center;
+    border: 1px solid rgb(248, 126, 126);
+    border-radius: 5px;
+}
+
 .form-article {
     padding: 2rem 3rem 3rem;
 }
@@ -164,6 +179,7 @@ button {
     border-radius: 10px;
     margin-top: 0.5rem;
     color: #fff;
+    cursor: pointer;
 }
 
 textarea,
