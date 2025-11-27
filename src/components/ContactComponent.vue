@@ -23,7 +23,7 @@
                 <article class="form-article">
                     <h3>Enviame un mensaje</h3>
                     <p>Completa el formulario y te respondere lo antes posible</p>
-                    <form name="contacto" method="POST" netlify @submit.prevent="handleSubmit">
+                    <form name="contacto" action="/?success=true" method="POST" data-netlify="true" netlify @submit.prevent="handleSubmit">
                         <input type="hidden" name="form-name" value="contacto">
                         <div class="form-group">
                             <label for="name">Nombre</label>
