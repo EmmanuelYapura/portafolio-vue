@@ -51,6 +51,10 @@ ul{
 li{
     list-style: none;
     padding-right: 1.2rem;
+
+    :hover{
+        color: #007BFF;
+    }
 }
 
 .header-content {
