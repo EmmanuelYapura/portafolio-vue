@@ -1,0 +1,61 @@
+.aboutme {
+    display: flex;
+    flex-direction: column;
+}
+
+.prose p {
+    padding-top: 0.2rem;
+    line-height: 30px;
+}
+
+.avatar-content {
+    display: none;
+}
+
+@media (min-width: 640px) {
+    .prose p {
+        padding-top: 1.2rem;
+        line-height: 40px;
+        font-size: 1.15rem;
+
+    }
+}
+
+@media (min-width: 768px) {
+    .prose {
+        display: flex;
+        gap: 2.2rem;
+    }
+
+    .prose p {
+        padding-top: 0.5rem;
+        line-height: 25px;
+        font-size: 1rem;
+    }
+
+    .avatar-content {
+        display: block;
+    }
+
+    .avatar {
+        max-width: 320px;
+        border-radius: 10px;
+    }
+}
+
+@media (min-width: 960px) {
+    .prose {
+        gap: 2rem;
+    }
+
+    .prose p {
+        padding-top: 1.1rem;
+        line-height: 35px;
+        font-size: 1.1rem;
+    }
+
+    .avatar-content {
+        padding: 0 1.1rem;
+        margin-top: 0.6rem;
+    }
+}
